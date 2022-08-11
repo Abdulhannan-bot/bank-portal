@@ -1,0 +1,359 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #6bd6f6;
+}
+
+.title-bar {
+    display: flex;
+    flex: auto auto auto;
+    justify-content: space-between;
+    padding: 10px 10px;
+    align-items: center;
+    height: 60px;
+    margin-bottom: -30px;
+    position: relative;
+}
+
+.login-message {
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    z-index: -1;
+    opacity: 0;
+}
+
+.title-bar-content {
+    color: brown;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome {
+    font-size: 20px;
+    margin-left: 15px;
+}
+
+.logo {
+    height: 60px;
+}
+
+.login{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.login-user,
+.login-password {
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    border-radius: 50px;
+    margin: 0 10px;
+    border: none;
+    font-size: 15px;
+    transition: all 0.3s;
+}
+
+.login-user:focus,
+.login-password:focus {
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+.login::placeholder {
+    color: #bbb;
+  }
+
+.right-enter-key {
+    font-size: 25px;
+    cursor: pointer;
+    background-color: inherit;
+    border: none;
+    transition: all 0.3s;
+}
+
+
+.app {
+    position: relative;
+    margin: 0px 200px;
+    margin-top: -40px;
+    margin-top: 20px; 
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    grid-template-rows: auto repeat(3, 8.7rem) auto;
+    gap: 2rem;
+    opacity: 0;
+    z-index: -1;
+    transition: all 1s;
+    background-color: #6bd6f6;
+}
+
+
+.current-balance {
+    display: flex;
+    grid-column: 1/ span 2;
+    align-items: flex-end;
+    justify-content: space-between;
+
+}
+
+.current-balance-content {
+    font-size: 25px;
+    color: rgb(95, 58, 58);
+}
+
+.current-balance-date {
+    font-size: 15px;
+    margin-top: -28px;
+    color: rgb(150, 118, 118);
+}
+
+.current-balance-value {
+    font-size: 35px;
+}
+
+.movements {
+    grid-row: 2 / span 3 ;
+    background-color: white;
+    width: 100%;
+    border-radius: 10px;
+    overflow: scroll;
+}
+
+.movement-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 60px;
+    border: none;
+    border-bottom: solid rgb(231, 222, 222);
+    border-width: 1px;
+    padding-top: 4.5px;
+    padding-bottom: 4.5px;
+    text-transform: uppercase;
+}
+
+.movement-type {
+    text-align: center;
+    min-width: 60px;
+    margin-left: 42px;
+    font-size: 13px;
+    border-radius: 10px;
+    color: white;
+    padding: 0 10px;
+}
+
+.movement-type-deposit {
+    background-image: linear-gradient(to top left, rgb(77, 168, 77), rgb(134, 216, 134));
+}
+
+.movement-type-withdrawal {
+    background-image: linear-gradient(to top left, rgb(147, 57, 57), rgb(196, 109, 109));
+}
+
+
+.movement-time {
+    margin-left: 20px;
+    font-size: 11px;
+    color: rgb(150, 118, 118);
+}
+
+.movement-value {
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+.summary {
+    grid-row: 5 ;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    padding: 0 10px;
+    margin-top: -40px;
+}
+
+.summary-tag {
+    margin-right: 10px;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.in-amount,
+.out-amount,
+.interest-amount {
+    margin-right: 40px;
+    font-size: 25px;
+    color: green;
+}
+
+.out-amount {
+    color: red;
+}
+
+
+
+.btn--sort {
+    margin-left: auto;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.right-enter-key:hover,
+.btn--sort:hover {
+    opacity: 0.7;
+}
+
+.operation {
+    border-radius: 10px;
+    font-size: 10px;
+    padding: 10px 40px;
+}
+
+.operation-transfer {
+    background-image: linear-gradient(to top left, rgb(165, 165, 12), rgb(244, 244, 114));
+    position: relative;
+}
+
+.transfer-message {
+    position: absolute;
+    width: 250px;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    opacity: 0;
+}
+
+
+.form {
+    display: grid;
+    grid-template-columns: 2.5fr 2.5fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 5px 10px;
+}
+
+.transfer-input,
+.amount-input,
+.loan-input,
+.close-input,
+.close-password-input {
+    border: none;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255, 0.4);
+}
+
+
+.form-label {
+    text-align: center;
+    font-size: 11px;
+}
+
+.btn-form {
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.btn-form:hover {
+    opacity: 0.7;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+.form-loan {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr 2.5fr;
+    grid-template-rows: auto auto;
+    gap: 5px 10px;
+}
+
+.form-label-loan {
+    grid-row: 2;
+}
+
+.operation-loan {
+    background-image: linear-gradient(to top left, rgb(10, 163, 10), rgb(91, 251, 91));
+    position: relative;
+}
+
+.loan-message {
+    position: absolute;
+    width: 260px;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    opacity: 0;
+}
+
+.operation-close {
+    background-image: linear-gradient(to top left, rgb(195, 51, 51), rgb(251, 93, 93));
+    position: relative;
+}
+
+.close-message {
+    position: absolute;
+    width: 260px;
+    top: 30px;
+    right: 35px;
+    z-index: -1;
+    opacity: 0;
+}
+
+.logout {
+    grid-column: 2;
+    margin-top: -20px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 12px;
+    align-items: center;
+    position: relative;
+}
+
+.logout-timer {
+    margin-left: 4px;
+}
+
+.btn-logout {
+    position: absolute;
+    top: 40px;
+    background-image: linear-gradient(to top left, rgb(69, 48, 173), rgb(99, 103, 221));
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+
+
+.transfer-input:focus,
+.amount-input:focus,
+.loan-input:focus,
+.close-input:focus,
+.close-password-input:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.btn-logout:active,
+.btn--sort:active,
+.btn-form:active,
+.right-enter-key:active {
+    opacity: 0.4;
+}

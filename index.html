@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Portal</title>
+    <link rel="stylesheet" href="style-app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="title-bar">
+        <p class="welcome">
+            Login to get started
+        </p>
+        <img src="icon.png" alt="logo" class="logo">
+        <form class="login">
+            <input type="text" placeholder="user" class="login-user login-user-2">
+            <input type="text" placeholder="PIN" maxlength="4" class="login-password login-password-2">
+            <button class="right-enter-key">&#8594</button>
+        </form>
+        <p class="login-message">
+            Invalid username or PIN
+        </p>
+    </nav>
+    <main class="app">
+        <div class="current-balance">
+            <div>
+                <p class="current-balance-content">
+                    Current Balance
+                </p>
+                <p class="current-balance-date">
+                    As of <span class="date">31/12/2022</span> 
+                </p>
+            </div>
+            <p class="current-balance-value">
+                &#8377;000
+            </p>        
+        </div>
+
+        <div class="movements">
+            <div class="movement-row">
+                <div class="movement-type movement-type-deposit">
+                    2 Deposit
+                </div>
+                <div class="movement-time">
+                    3 DAYS AGO
+                </div>
+                <div class="movement-value">
+                    &#8377;20,000
+                </div>
+            </div>
+            <div class="movement-row">
+                <div class="movement-type movement-type-withdrawal">
+                    1 Withdrawal
+                </div>
+                <div class="movement-time">
+                    24/01/2022
+                </div>
+                <div class="movement-value">
+                    - &#8377;1,000
+                </div>
+            </div>
+        </div>
+
+
+        <div class="summary">
+            <p class="summary-tag">In</p>
+            <p class="in-amount in-amount-2">&#8377;000</p>
+            <p class="summary-tag">Out</p>
+            <p class="out-amount out-amount-2">&#8377;000</p>
+            <!-- <p class="summary-tag">Interest</p>
+            <p class="interest-amount interest-amount-2">&#8377;000</p> -->
+            <button class="btn--sort">&downarrow; SORT</button>
+        </div>
+
+
+        <div class="operation operation-transfer">
+            <h2>Transfer Money</h2>
+            <form class="form form-transfer">
+                <input type="text" class="transfer-input transfer-input-2">
+                <input type="number" class="amount-input amount-input-2">
+                <button class="btn-form btn-transfer">&rarr;</button>
+                <label class="form-label">Transfer to</label>
+                <label class="form-label">Amount</label>
+            </form>
+            <p class="transfer-message">
+                Could not process transaction.
+                Either user details are incorrect or amount is out of range
+            </p>
+        </div>
+        <div class="operation operation-loan">
+            <h2>Request Loan</h2>
+            <form class="form form-loan">
+                <input type="number" class="loan-input loan-input-2">
+                <button class="btn-form btn-loan">&rarr;</button>
+                <label class="form-label form-label-loan">Amount</label>
+            </form>
+            <p class="loan-message">
+                Could not process transaction.
+                Should have atleast one deposit greater or equal to 10% of requested loan amount
+            </p>
+        </div>
+        <div class="operation operation-close">
+            <h2>Close Account</h2>
+            <form class="form form-close">
+                <input type="text" class="close-input close-input-2">
+                <input type="password" maxlength="8" class="close-password-input close-password-input-2">
+                <button class="btn-form btn-close">&rarr;</button>
+                <label class="form-label">Confirm user</label>
+                <label class="form-label">Confirm PIN</label>
+            </form>
+            <p class="close-message">
+                username or PIN doesn't match
+            </p>
+        </div>
+        <p class="logout">
+            You will be looged out in <span class="logout-timer">05:00</span>
+            <button class="btn-logout">LOG OUT</button>
+        </p>
+        
+    </main>
+   
+    <script src="script.js"></script>
+</body>
+</html>
