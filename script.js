@@ -44,7 +44,7 @@ const account1 = {
 };
 
 const account3 = {
-  owner: 'Anurah Kashyap',
+  owner: 'Anurag Kashyap',
   movements: [2000, -200, 3400, -300, -20, 50, 400, -460],
   pin: 3333,
   movementsDates: [
